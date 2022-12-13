@@ -1,0 +1,1 @@
+Get-ADUser -Filter * -Properties SamAccountName, displayName, Enabled, Created, lastLogonDate, Description, mail | ft SamAccountName, displayName, Enabled, Created, lastLogonDate, Description, mail | out-file "c:\Audit_Results\AllADUsers_$((Get-Date).ToString('MM-dd-yyyy_hh-mm-ss')).csv"
